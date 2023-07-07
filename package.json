@@ -12,5 +12,8 @@
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "json2csv": "^6.0.0-alpha.2"
+  },
+  "volta": {
+    "node": "16.20.1"
   }
 }

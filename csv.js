@@ -2,12 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const json2csv = require('json2csv').parse;
 
+// slackからexportしたJSONファイルたちを1つのcsvにする。
+// 以下の定数で操作を制御できる。
 const inputFolderPath = './json'; // 入力フォルダのパス
 const outputFilePath = './file.csv'; // 出力CSVファイルのパス
+const fields = ['text', 'ts']; // CSVのカラムに対応するキー
 
 // JSONファイルを読み込み、CSV形式に変換する関数
 function convertToCSV(jsonData) {
-  const fields = ['text', 'ts']; // CSVのカラムに対応するキー
   return json2csv(jsonData, { fields });
 }
 
